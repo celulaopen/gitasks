@@ -1,0 +1,12 @@
+<form action="/users" method="POST">
+  Name: <input type="text" name="name"><br />
+  E-mail:<input type="text" name="mail"><br />
+  <input type="submit" value="Add User!">
+</form>
+<ul id="users">
+  <% @users.each do |user| %>
+    <li>
+      <a href="/user/<%= user.id %>"><%= user.name %> {<%= user.mail %>}</a>
+    </li>
+  <% end %>
+ </ul>

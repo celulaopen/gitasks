@@ -1,0 +1,22 @@
+<form action="/tasks" method="POST">
+  Title:<input type="text" name="name"><br />
+  Project:<select name="project_id">
+    <% @projects.each do |project| %>
+      <option value="<%= project.id %>"><%= project.name %></option>
+    <% end %>
+  </select><br />
+  User<select name="user_id">
+    <% @users.each do |user| %>
+      <option value="<%= user.id %>"><%= user.name %></option>
+    <% end %>
+  </select><br />
+  <input type="submit" value="Add Task!">
+</form>
+
+<ul id="tasks">
+  <% @tasks.each do |task| %>
+    <li class="<%= task.completed_at ? "completed":  nil %>">
+      <a href="/task/<%= task.id %>"><%= task.name %></a>
+    </li>
+  <% end %>
+<ul>

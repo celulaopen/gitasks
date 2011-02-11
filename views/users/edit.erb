@@ -1,0 +1,11 @@
+<form action="<%= @user.id %>" method="POST">
+  <input name="_method" type="hidden" value="PUT">
+  Name:<input type="text" name="name" value="<%= @user.name %>"><br />
+  E-mail:<input type="text" name="mail" value="<%= @user.mail %>"><br />
+  <input name="commit" type="submit" value="Update">
+</form>
+
+<form action="<%= @user.id %>" method="POST">
+  <input name="_method" type="hidden" value="DELETE">
+  <input type="submit" value="Delete">
+</form> or <a href="/projects">Cancel</a>

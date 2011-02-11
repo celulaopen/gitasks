@@ -1,0 +1,11 @@
+<form action="/projects" method="POST">
+  Name: <input type="text" name="name">
+  <input type="submit" value="Add Project!">
+</form>
+<ul id="projects">
+  <% @projects.each do |project| %>
+    <li>
+      <a href="/project/<%= project.id %>"><%= project.name %></a>
+    </li>
+  <% end %>
+ </ul>

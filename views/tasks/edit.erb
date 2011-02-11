@@ -1,0 +1,21 @@
+<form action="<%= @task.id %>" method="POST">
+  <input name="_method" type="hidden" value="PUT">
+  Title: <input type="text" name="name"value="<%= @task.name %>"><br />
+  Project: <select name="project_id">
+    <% @projects.each do |project| %>
+      <option value="<%= project.id %>"<%= project.id == @task.project_id ? " selected=\"selected\"" : nil %>><%= project.name %></option>
+    <% end %>
+  </select><br>
+  User: <select name="user_id">
+    <% @users.each do |user| %>
+      <option value="<%= user.id %>"<%= user.id == @task.user_id ? " selected=\"selected\"" : nil %>><%= user.name %></option>
+    <% end %>
+  </select><br>
+  Completed?<input name="completed" type="checkbox" value="done"<%= @task.completed_at ? " checked" : nil %>"><br>
+  <input name="commit" type="submit" value="Update">
+</form>
+  
+<form action="<%= @task.id %>" method="POST">
+  <input name="_method" type="hidden" value="DELETE">
+  <input type="submit" value="Delete">
+</form> or <a href="/tasks">Cancel</a>

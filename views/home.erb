@@ -1,0 +1,8 @@
+<h2>Home</h2>
+<ul id="tasks">
+  <% @tasks.each do |task| %>
+    <li class="<%= task.completed_at ? "completed":  nil %>">
+      <a href="/task/<%= task.id %>"><%= task.name %> [Project: <%= task.project.name %> | User: <%= task.user.name %> ] </a>
+    </li>
+  <% end %>
+<ul>
