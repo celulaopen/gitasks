@@ -6,7 +6,13 @@
 	<title>Gitasks</title> 
 	<link href='http://fonts.googleapis.com/css?family=Kreon:regular,bold' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Puritan:regular,bold' rel='stylesheet' type='text/css'>
+	
+	
 	<link rel="stylesheet" href="../stylesheets/style.css" type="text/css" />
+	<script src="../javascripts/jquery-1.5.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../javascripts/application.js" type="text/javascript" charset="utf-8"></script>
+	
 </head> 
 <body> 
 	
@@ -16,16 +22,30 @@
 
 		<nav>
 	  	<ul>
-	      <li><a class="small magenta awesome" title="Show Tasks" href="/tasks">Tasks</a></li>
-				<li><a class="small red awesome" title="Show Projects" href="/projects">Projects</a></li>
-	      <li><a class="small orange awesome" title="Show Users" href="/users">Users</a></li>
-				<li><a class="small yellow awesome" title="Show Users" href="/">Dashboard</a></li>
+	      <li>
+					<a class="minibutton btn-task" title="Show Tasks" href="/tasks">
+							<span><span class="icon"></span>Tasks</span>
+					</a>
+				</li>
+				<li>
+						<a class="minibutton btn-project" title="Show Projects" href="/projects">
+							<span><span class="icon"></span>Projects</span>
+						</a>
+				</li>
+	      <li>
+					<a class="minibutton btn-user" title="Show Users" href="/users">
+						<span><span class="icon"></span>Users</span>
+					</a>
+				</li>
+				<li>
+					<a class="minibutton btn-dashbord" title="Show Users" href="/">
+						<span><span class="icon"></span>Dashborad</span>
+					</a>
+				</li>
 			</ul>
 	  </nav>
 		
 	</header>
-  
-	
 	
 	<section id="content">
  		<%= yield %>

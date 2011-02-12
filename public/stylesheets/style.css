@@ -24,6 +24,7 @@ body {
     font-family: 'Ubuntu', arial, serif;
     color: #333;
     background-image: url(bg.gif);
+    overflow: hidden;
 }
 
 article,aside,details,figcaption,figure,
@@ -97,11 +98,13 @@ input, select {
 
 header{
 	height:40px;
-	padding: 5px;
+	padding: 5px 0;
 	background-image: url(bg_menu.gif);
 	-webkit-box-shadow: 0px 2px 5px #fff;
--moz-box-shadow: 0px 2px 5px #fff;
-box-shadow: 0px 2px 5px #fff;
+	-moz-box-shadow: 0px 2px 5px #fff;
+	box-shadow: 0px 2px 5px #fff;
+	width: 100%;
+	overflow: none;
 }
 
 header h1{
@@ -113,7 +116,7 @@ header h1{
 	float: left;
 	text-indent: 20px;
 	color: #fff;
-	line-height: 50px;
+	line-height: 40px;
 }
 header h1 small{
 	font-size: 14px;
@@ -121,7 +124,6 @@ header h1 small{
 }
 
 nav {
-	padding: 4px;
 	height: 21px;
 	width: 400px;
 	float: right;
@@ -135,7 +137,9 @@ nav ul li{
 
 
 section#content{
-	padding: 20px 40px;
+	padding: 20px 2%;
+	overflow-y: auto;
+	width: 96%;
 }
 
 section#content h2{
@@ -144,12 +148,24 @@ section#content h2{
 	border-bottom: 1px solid #666;
 }
 
+footer{
+	height: 30px;
+	padding:5px 0;
+	background-image: url(bg_menu.gif);
+	width: 100%;
+}
 
 
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
 
-
-
-/* @group BUTTONS */
+/* @group BUTTONS  AWESOME*/
 
 .awesome, .awesome:visited {
 	background: #222 url(alert-overlay.png) repeat-x; 
@@ -195,6 +211,117 @@ section#content h2{
 
 /* @end */
 
+/* @group GITHUB Style Buttons */
+
+/* button basics */
+  a.minibutton {
+    display:inline-block;
+    height:23px;
+    padding:0 0 0 3px;
+    font-size:12px;
+    font-weight: bold;
+    font-family: 'Puritan', arial, serif;
+    color: #505050;
+    text-shadow:0px 1px 0 #fff; 
+    background:url(minibutton_matrix.png) 0 0 no-repeat;
+    white-space:nowrap;
+    border:none;
+    overflow:visible;
+    cursor:pointer;
+    text-decoration:none;
+  }
+  
+  a.minibutton>span {
+    display:block;
+    height:23px;
+    padding:0 10px 0 8px;
+    line-height:23px;
+    background:url(minibutton_matrix.png) 100% 0 no-repeat;
+  }
+  
+  a.minibutton:hover, a.minibutton:focus {
+    color:#fff;
+    text-decoration:none;
+    text-shadow:-1px -1px 0 rgba(0,0,0,0.3);
+    background-position:0 -30px;
+  }
+  a.minibutton:hover>span, a.minibutton:focus>span {background-position:100% -30px;}
+  
+  a.minibutton.mousedown{background-position:0 -60px; }
+  a.minibutton.mousedown>span{background-position:100% -60px; }
+  
+
+  
+.btn-dashbord .icon,
+.btn-project .icon,
+.btn-date .icon,
+.btn-user .icon,
+.btn-calendar .icon,
+.btn-time .icon,
+.btn-task .icon,
+.btn-book .icon,
+.btn-trash .icon,
+.btn-comment .icon,
+.btn-tag .icon,
+.btn-piker .icon,
+.btn-plus .icon,
+.btn-check .icon,
+.btn-alert .icon{
+	position:relative;
+	top:-1px;
+	float:left;
+	margin-left:-4px;
+	width:18px;
+	height:22px;
+	background:url(minibutton_icons.png) 0 0 no-repeat;
+}
+
+.btn-dashbord .icon{ background-position: -5px -2px; }
+.btn-dashbord:hover .icon{ background-position: -5px -22px; }
+
+.btn-project .icon{ background-position: -24px -2px; }
+.btn-project:hover .icon{ background-position: -24px -22px; }
+
+.btn-date .icon{ background-position: 124px -3px; }
+.btn-date:hover .icon{ background-position: 124px -3px; }
+
+.btn-user .icon{ background-position: -63px -2px; }
+.btn-user:hover .icon{ background-position: -63px -22px; }
+
+.btn-calendar .icon{ background-position: 124px -3px; }
+.btn-calendar:hover .icon{ background-position: 124px -3px; }
+
+.btn-time .icon{ background-position: 124px -3px; }
+.btn-time:hover .icon{ background-position: 124px -3px; }
+
+.btn-task .icon { background-position: -122px -2px; }
+.btn-task:hover .icon { background-position:-122px -22px; }
+
+.btn-book .icon{ background-position: 124px -3px; }
+.btn-book:hover .icon{ background-position: 124px -3px; }
+
+.btn-trash .icon{ background-position: 124px -3px; }
+.btn-trash:hover .icon{ background-position: 124px -3px; }
+
+.btn-comment .icon{ background-position: 124px -3px; }
+.btn-comment:hover .icon{ background-position: 124px -3px; }
+
+.btn-tag .icon{ background-position: 124px -3px; }
+.btn-tag:hover .icon{ background-position: 124px -3px; }
+
+.btn-piker .icon{ background-position: 124px -3px; }
+.btn-piker:hover .icon{ background-position: 124px -3px; }
+
+.btn-plus .icon{ background-position: 124px -3px; }
+.btn-plus:hover .icon{ background-position: 124px -3px; }
+
+.btn-check .icon{ background-position: 124px -3px; }
+.btn-check:hover .icon{ background-position: 124px -3px; }
+
+.btn-alert .icon{ background-position: 124px -3px; }
+.btn-alert:hover .icon{ background-position: 124px -3px; }  
+
+/* @end */
 
 
 

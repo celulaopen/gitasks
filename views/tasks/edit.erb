@@ -13,7 +13,7 @@
       <option value="<%= user.id %>"<%= user.id == @task.user_id ? " selected=\"selected\"" : nil %>><%= user.name %></option>
     <% end %>
   </select><br>
-  Completed?<input name="completed" type="checkbox" value="done"<%= @task.completed_at ? " checked" : nil %>"><br>
+  Completed?<input name="completed" type="checkbox" value="done"<%= @task.completed_at ? ' checked' : nil %>><br>
   <input name="commit" type="submit" value="Update">
 </form>
   
@@ -21,3 +21,4 @@
   <input name="_method" type="hidden" value="DELETE">
   <input type="submit" value="Delete">
 </form> or <a href="/tasks">Cancel</a>
+
