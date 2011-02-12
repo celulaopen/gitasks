@@ -1,22 +1,37 @@
 <!DOCTYPE html> 
 <html id="home" lang="en"> 
 <head> 
-<meta charset=utf-8 /> 
-<meta name="viewport" content="width=620" /> 
-<title>Gitasks</title> 
-<link rel="stylesheet" href="/public/stylesheets/style.css" type="text/css" /> 
+	<meta charset=utf-8 /> 
+	<meta name="viewport" content="width=620" /> 
+	<title>Gitasks</title> 
+	<link href='http://fonts.googleapis.com/css?family=Kreon:regular,bold' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../stylesheets/style.css" type="text/css" />
 </head> 
 <body> 
-<section id="top"> 
-  <h1><a href="/">Celula Open - Git Tasks</a></h1>
-  <menu>
-    <ul>
-      <li><a title="Show Projects" href="/projects">Projects</a></li>
-      <li><a title="Show Users" href="/users">Users</a></li>
-      <li><a title="Show Tasks" href="/tasks">Tasks</a></li>
-   </menu>
- </section>
- 
- <%= yield %>
- </body>
- </html>
+	
+	<header>
+		
+  	<h1>Task Manager  <small>[ Celula Open ]</small></h1>
+
+		<nav>
+	  	<ul>
+	      <li><a class="small magenta awesome" title="Show Tasks" href="/tasks">Tasks</a></li>
+				<li><a class="small red awesome" title="Show Projects" href="/projects">Projects</a></li>
+	      <li><a class="small orange awesome" title="Show Users" href="/users">Users</a></li>
+				<li><a class="small yellow awesome" title="Show Users" href="/">Dashboard</a></li>
+			</ul>
+	  </nav>
+		
+	</header>
+  
+	
+	
+	<section id="content">
+ 		<%= yield %>
+	</section>
+	
+	<footer></footer>
+	
+</body>
+</html>
