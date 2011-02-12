@@ -3,11 +3,12 @@ Gitasks
 
 Sinatra app to manager tasks
 
-# To install: #
+## To install: ##
 
-1. git clone
-2. bundle install
+	1. git clone git@github.com:celulaopen/gitasks.git
+	2. bundle install
 
-## to run: ##
+## To run: ##
 
-Go to root directory and run ommand "rackup"
+Go to root directory and run command: 
+	rackup
