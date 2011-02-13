@@ -1,19 +1,36 @@
 <h2>Tasks</h2>
+<a class="awesome red medium" href="#" data-reveal-id="myModal">New Task</a>
 
-<form action="/tasks" method="POST">
-  Title:<input type="text" name="name"><br />
-  Project:<select name="project_id">
-    <% @projects.each do |project| %>
-      <option value="<%= project.id %>"><%= project.name %></option>
-    <% end %>
-  </select><br />
-  User<select name="user_id">
-    <% @users.each do |user| %>
-      <option value="<%= user.id %>"><%= user.name %></option>
-    <% end %>
-  </select><br />
-  <input type="submit" value="Add Task!">
-</form>
+<div id="myModal" class="reveal-modal">
+    <h1>New Task</h1>
+		<form action="/tasks" method="POST">
+			<div class="field">
+		 		<label>Title:</label><input type="text" name="name">
+			</div>
+			<div class="field">
+				<label>Project:</label>
+				<select name="project_id">
+					<% @projects.each do |project| %>
+				  	<option value="<%= project.id %>"><%= project.name %></option>
+				  <% end %>
+				 </select>
+			</div>
+		  <div class="clear_form"></div>
+			<div class="field">
+				<label>User:</label>
+				<select name="user_id">
+		    	<% @users.each do |user| %>
+		      	<option value="<%= user.id %>"><%= user.name %></option>
+		    	<% end %>
+		  	</select>
+			</div>
+			<div class="actions">
+		  	<input type="submit" value="Add Task!">
+			</div>
+		</form>
+		
+		<a class="close-reveal-modal">&#215;</a>
+</div>
 
 <ul id="tasks">
   <% @tasks.each do |task| %>

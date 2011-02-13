@@ -1,8 +1,39 @@
-<h2>Home</h2>
+<section class="clearfix" id="options">
+    <div class="option-combo">
+      <h3>Filter:</h3>
+      <ul class="option-set floated clearfix" id="filter">
+        <li><a class="selected" data-filter="*" href="#show-all">show all</a></li>
+        <li><a data-filter=".completed" href="#features">completed</a></li>
+        <li><a data-filter=".not_completed" href="#docs">not completed</a></li>
+      </ul>
+    </div>
+
+    <div class="option-combo">
+      <h3>Sort:</h3>
+      <ul class="option-set floated clearfix" id="sort">
+        <li><a class="selected" data-sort="original-order" href="#type">original order</a></li>
+        <li><a data-sort="related" href="#related">related</a></li>
+        <li><a data-sort="user" href="#user">user</a></li>
+      </ul>
+    </div>
+    <div class="option-combo">
+      <h3>Layout: </h3>
+      <ul class="option-set floated clearfix" id="layouts">
+        <li><a class="selected" href="#fitRows">fitRows</a></li>
+        <li><a href="#straightDown">straightDown</a></li>
+        <li><a href="#masonry">masonry</a></li>
+      </ul>
+    </div>
+</section>
+
+
 <ul id="tasks">
   <% @tasks.each do |task| %>
-    <li class="<%= task.completed_at ? "completed":  nil %>">
-      <a href="/task/<%= task.id %>"><%= task.name %> [Project: <%= task.project.name %> | User: <%= task.user.name %> ] </a>
+    <li class="<%= task.completed_at ? "completed":  "not_completed" %>" data-related="<%= task.project.name %>" data-user="<%= task.user.name %>">
+			<h5><span class="project"></span> <%= task.project.name %></h5>
+			<h5 class="user"><span class="user"></span> <%= task.user.name %></h5>
+			<div class="clear"></div>
+      <p><a href="/task/<%= task.id %>"><%= task.name %></a></p>
     </li>
   <% end %>
 </ul>
