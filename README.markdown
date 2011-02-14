@@ -13,3 +13,5 @@ Sinatra app to manager tasks
 
 Go to root directory and run command: 
 	rackup
+
+
